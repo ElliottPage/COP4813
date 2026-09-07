@@ -1,30 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello World | COP4813</title>
-  <style>
-    body { font-family: sans-serif; max-width: 640px; margin: 40px auto; padding: 0 20px; color: #333; }
-    header { border-bottom: 2px solid #0366d6; margin-bottom: 20px; }
-    img { max-width: 100%; height: auto; border-radius: 6px; }
-    footer { margin-top: 40px; border-top: 1px solid #ccc; padding-top: 10px; font-size: 0.9em; color: #777; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Elliott Page | COP4813 Web Programming Portfolio</title>
+
+    <meta
+        name="description"
+        content="Elliott Page's COP4813 web programming portfolio, containing coursework, assignments, and web development skills."
+    >
+    <meta name="author" content="Elliott Page">
+    <meta
+        name="keywords"
+        content="Elliott Page, COP4813, web programming, HTML, CSS, JavaScript, portfolio"
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <header>
-    <h1>Hello, World!</h1>
-    <p>This is my first web page, built for Web Systems COP4813.</p>
-  </header>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <main>
-    <p>Welcome to my site. This page is part of the COP4813 course on web application development.</p>
-    <img src="hello.jpg" alt="Hello World graphic">
-    <p>^Not my cat</p>
-  </main>
+    <header class="site-header">
+        <div class="container">
+            <p class="site-label">COP4813 Portfolio</p>
+            <h1>Elliott Page</h1>
+            <p class="tagline">
+                Student developer building practical, accessible web experiences.
+            </p>
+        </div>
+    </header>
 
-  <footer>
-    <p>Created by <strong>Elliott Page</strong></p>
-  </footer>
+    <nav class="site-navigation" aria-label="Primary navigation">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#assignments">My Assignments</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="container hero-layout">
+                <div>
+                    <h2>Welcome to My Web Programming Site</h2>
+                    <p>
+                        This website is my portfolio for COP4813. Throughout the semester,
+                        I will use it to demonstrate my web programming work, publish class
+                        assignments, and show the technical skills I am developing.
+                    </p>
+                    <a class="button" href="#assignments">View My Assignments</a>
+                </div>
+
+                <img
+                    class="profile-image"
+                    src="images/image.jpg"
+                    alt="A representative image for Elliott Page's web programming portfolio."
+                >
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>
+                    I am Elliott Page, a student interested in web development, programming,
+                    and technology. I enjoy creating useful websites and learning how to build
+                    applications that are organized, responsive, and easy to use.
+                </p>
+                <p>
+                    This site also serves as an early professional portfolio. It gives potential
+                    employers and collaborators a place to see my coursework, technical growth,
+                    and examples of the projects I create.
+                </p>
+            </div>
+        </section>
+
+        <section id="assignments" class="section section-alt">
+            <div class="container">
+                <h2>My Assignments</h2>
+                <p>
+                    This section will be updated as I complete additional COP4813 assignments.
+                </p>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Assignment 1: Hello World</h3>
+                        <p>
+                            My first COP4813 web page, including HTML structure, an image,
+                            a link, and basic CSS styling.
+                        </p>
+                        <a href="assignment1/index.html">View Assignment 1</a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Assignment 2: Portfolio Website</h3>
+                        <p>
+                            A personal web programming portfolio with a navigation menu,
+                            accessible page structure, descriptive metadata, and external CSS.
+                        </p>
+                        <a href="index.html" aria-current="page">View Assignment 2</a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Future Assignments</h3>
+                        <p>
+                            Additional COP4813 coursework and web programming projects will
+                            be added here during the semester.
+                        </p>
+                        <a href="#assignments">Assignment List</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2>Technical Skills</h2>
+                <ul class="skills-list">
+                    <li>HTML5 and semantic page structure</li>
+                    <li>CSS styling and responsive web design</li>
+                    <li>JavaScript fundamentals</li>
+                    <li>SQL and database concepts</li>
+                    <li>Linux command-line administration</li>
+                    <li>Git and GitHub version control</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="resources" class="section section-alt">
+            <div class="container">
+                <h2>Programming Resources</h2>
+                <p>These are resources I use while learning web development.</p>
+
+                <ul class="resource-list">
+                    <li>
+                        <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">
+                            MDN Web Docs
+                        </a>
+                        — Documentation for HTML, CSS, and JavaScript.
+                    </li>
+                    <li>
+                        <a href="https://www.w3.org/" target="_blank" rel="noopener noreferrer">
+                            World Wide Web Consortium (W3C)
+                        </a>
+                        — Web standards and validation resources.
+                    </li>
+                    <li>
+                        <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">
+                            W3C Markup Validation Service
+                        </a>
+                        — Tool for validating HTML.
+                    </li>
+                    <li>
+                        <a href="https://www.webaccessibility.com/" target="_blank" rel="noopener noreferrer">
+                            Web Accessibility Checker
+                        </a>
+                        — Tool for checking website accessibility.
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Elliott Page. COP4813 Web Programming Portfolio.</p>
+        </div>
+    </footer>
 </body>
 </html>
