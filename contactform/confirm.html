@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Review and confirm your contact form information."
+    >
+    <title>Confirm Information | Elliott Page Portfolio</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <p class="site-label">COP4813 Portfolio</p>
+            <h1>Elliott Page</h1>
+            <p class="tagline">
+                Review your contact form information before confirming it.
+            </p>
+        </div>
+    </header>
+
+    <nav class="site-navigation" aria-label="Primary navigation">
+    <div class="container">
+        <ul class="nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">Contact Form</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <main id="main-content" class="form-page">
+        <div class="container">
+            <section class="form-card" aria-labelledby="confirmation-heading">
+                <header class="form-header">
+                    <h2 id="confirmation-heading">Review Your Information</h2>
+                    <p>
+                        Verify that the information below is correct. Select
+                        “Go Back and Edit” if you need to make changes.
+                    </p>
+                </header>
+
+                <div id="confirmationContent">
+                    <dl class="review-list">
+                        <div>
+                            <dt>Name</dt>
+                            <dd id="reviewName"></dd>
+                        </div>
+
+                        <div>
+                            <dt>Mailing Address</dt>
+                            <dd id="reviewAddress"></dd>
+                        </div>
+
+                        <div>
+                            <dt>Phone Number</dt>
+                            <dd id="reviewPhone"></dd>
+                        </div>
+
+                        <div>
+                            <dt>Email Address</dt>
+                            <dd id="reviewEmail"></dd>
+                        </div>
+
+                        <div>
+                            <dt>Birth Date</dt>
+                            <dd id="reviewBirthDate"></dd>
+                        </div>
+
+                        <div>
+                            <dt>Message</dt>
+                            <dd id="reviewMessage" class="message-review"></dd>
+                        </div>
+                    </dl>
+
+                    <div class="button-row">
+                        <button
+                            id="editButton"
+                            type="button"
+                            class="secondary-button"
+                        >
+                            Go Back and Edit
+                        </button>
+
+                        <button
+                            id="confirmButton"
+                            type="button"
+                            class="primary-button"
+                        >
+                            Confirm and Open Email
+                        </button>
+                    </div>
+                </div>
+
+                <p id="missingDataMessage" class="error-message" hidden>
+                    No form information was found. Please return to the contact
+                    form and complete it before viewing this confirmation page.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Elliott Page. COP4813 Web Programming Portfolio.</p>
+        </div>
+    </footer>
+
+    <script src="confirm.js"></script>
+</body>
+</html>

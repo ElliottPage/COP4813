@@ -202,9 +202,199 @@ a:focus {
     margin: 0;
 }
 
+/* =========================
+   Contact Form Styles
+   ========================= */
+
+.form-page {
+    padding: 3.5rem 0;
+    background-color: var(--light-blue);
+}
+
+.form-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(18, 53, 91, 0.14);
+}
+
+.form-header {
+    margin-bottom: 2rem;
+}
+
+.form-header h2 {
+    margin: 0 0 0.5rem;
+    color: var(--navy);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.form-header p {
+    margin: 0;
+}
+
+.contact-form fieldset {
+    margin: 0 0 1.5rem;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.contact-form legend {
+    padding: 0 0.4rem;
+    color: var(--navy);
+    font-weight: bold;
+}
+
+.form-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.two-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.address-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.contact-form label {
+    color: var(--navy);
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--dark-text);
+    font: inherit;
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: 3px solid rgba(255, 191, 0, 0.35);
+    outline-offset: 1px;
+    border-color: var(--navy);
+}
+
+.contact-form small {
+    color: #4b5563;
+}
+
+.required-note {
+    color: #4b5563;
+    font-size: 0.9rem;
+}
+
+.required-note span,
+.contact-form label span {
+    color: #b42318;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: flex-end;
+}
+
+.primary-button,
+.secondary-button {
+    padding: 0.75rem 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+.primary-button {
+    border: 2px solid var(--navy);
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+.primary-button:hover,
+.primary-button:focus {
+    background-color: #0c2642;
+}
+
+.secondary-button {
+    border: 2px solid var(--navy);
+    background-color: var(--white);
+    color: var(--navy);
+}
+
+.secondary-button:hover,
+.secondary-button:focus {
+    background-color: var(--light-blue);
+}
+
+.review-list {
+    margin: 0 0 2rem;
+}
+
+.review-list > div {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.review-list > div:first-child {
+    border-top: 1px solid var(--border);
+}
+
+.review-list dt {
+    color: var(--navy);
+    font-weight: bold;
+}
+
+.review-list dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.message-review {
+    white-space: pre-wrap;
+}
+
+.error-message {
+    padding: 1rem;
+    border-left: 4px solid #b42318;
+    color: #7f1d1d;
+    background-color: #fef2f2;
+}
+
+/* =========================
+   Mobile Styles
+   ========================= */
+
 @media (max-width: 700px) {
     .hero-layout,
-    .card-grid {
+    .card-grid,
+    .two-columns,
+    .address-grid,
+    .review-list > div {
         grid-template-columns: 1fr;
     }
 
@@ -218,5 +408,14 @@ a:focus {
 
     .profile-image {
         max-width: 280px;
+    }
+
+    .button-row {
+        justify-content: stretch;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
     }
 }

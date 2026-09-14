@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="A validated contact form with a confirmation page."
+    >
+    <title>Contact Form | Web Systems</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <p class="site-label">Web Systems</p>
+            <h1>Contact Form</h1>
+            <p class="tagline">
+                Please complete the form below. You will have an opportunity
+                to review your information before opening your email application.
+            </p>
+        </div>
+    </header>
+
+    <nav class="site-navigation" aria-label="Main navigation">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="index.html" aria-current="page">Contact Form</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="form-page">
+        <div class="container">
+            <section class="form-card" aria-labelledby="form-heading">
+                <header class="form-header">
+                    <h2 id="form-heading">Tell Us About Yourself</h2>
+                    <p>
+                        All fields are required. Please enter accurate information
+                        so you can review it on the confirmation page.
+                    </p>
+                </header>
+
+                <form id="contactForm" class="contact-form" novalidate>
+                    <fieldset>
+                        <legend>Personal Information</legend>
+
+                        <div class="form-grid two-columns">
+                            <div class="form-group">
+                                <label for="firstName">
+                                    First Name <span aria-hidden="true">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    name="firstName"
+                                    autocomplete="given-name"
+                                    required
+                                    minlength="2"
+                                    pattern="[A-Za-zÀ-ÿ' -]+"
+                                    title="Enter a valid first name using letters, spaces, apostrophes, or hyphens."
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">
+                                    Last Name <span aria-hidden="true">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    name="lastName"
+                                    autocomplete="family-name"
+                                    required
+                                    minlength="2"
+                                    pattern="[A-Za-zÀ-ÿ' -]+"
+                                    title="Enter a valid last name using letters, spaces, apostrophes, or hyphens."
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birthDate">
+                                Birth Date <span aria-hidden="true">*</span>
+                            </label>
+                            <input
+                                type="date"
+                                id="birthDate"
+                                name="birthDate"
+                                autocomplete="bday"
+                                required
+                            >
+
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Mailing Address</legend>
+
+                        <div class="form-group">
+                            <label for="streetAddress">
+                                Street Address <span aria-hidden="true">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                id="streetAddress"
+                                name="streetAddress"
+                                autocomplete="street-address"
+                                required
+                                minlength="5"
+                                placeholder="123 Main Street"
+                            >
+                        </div>
+
+                        <div class="form-grid address-grid">
+                            <div class="form-group">
+                                <label for="city">
+                                    City <span aria-hidden="true">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="city"
+                                    name="city"
+                                    autocomplete="address-level2"
+                                    required
+                                    pattern="[A-Za-zÀ-ÿ' .-]+"
+                                    title="Enter a valid city name."
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="state">
+                                    State <span aria-hidden="true">*</span>
+                                </label>
+                                <select
+                                    id="state"
+                                    name="state"
+                                    autocomplete="address-level1"
+                                    required
+                                >
+                                    <option value="">Choose</option>
+                                    <option value="AL">AL</option>
+                                    <option value="AK">AK</option>
+                                    <option value="AZ">AZ</option>
+                                    <option value="AR">AR</option>
+                                    <option value="CA">CA</option>
+                                    <option value="CO">CO</option>
+                                    <option value="CT">CT</option>
+                                    <option value="DE">DE</option>
+                                    <option value="FL">FL</option>
+                                    <option value="GA">GA</option>
+                                    <option value="HI">HI</option>
+                                    <option value="ID">ID</option>
+                                    <option value="IL">IL</option>
+                                    <option value="IN">IN</option>
+                                    <option value="IA">IA</option>
+                                    <option value="KS">KS</option>
+                                    <option value="KY">KY</option>
+                                    <option value="LA">LA</option>
+                                    <option value="ME">ME</option>
+                                    <option value="MD">MD</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MI">MI</option>
+                                    <option value="MN">MN</option>
+                                    <option value="MS">MS</option>
+                                    <option value="MO">MO</option>
+                                    <option value="MT">MT</option>
+                                    <option value="NE">NE</option>
+                                    <option value="NV">NV</option>
+                                    <option value="NH">NH</option>
+                                    <option value="NJ">NJ</option>
+                                    <option value="NM">NM</option>
+                                    <option value="NY">NY</option>
+                                    <option value="NC">NC</option>
+                                    <option value="ND">ND</option>
+                                    <option value="OH">OH</option>
+                                    <option value="OK">OK</option>
+                                    <option value="OR">OR</option>
+                                    <option value="PA">PA</option>
+                                    <option value="RI">RI</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SD">SD</option>
+                                    <option value="TN">TN</option>
+                                    <option value="TX">TX</option>
+                                    <option value="UT">UT</option>
+                                    <option value="VT">VT</option>
+                                    <option value="VA">VA</option>
+                                    <option value="WA">WA</option>
+                                    <option value="WV">WV</option>
+                                    <option value="WI">WI</option>
+                                    <option value="WY">WY</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="zip">
+                                    ZIP Code <span aria-hidden="true">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="zip"
+                                    name="zip"
+                                    autocomplete="postal-code"
+                                    required
+                                    inputmode="numeric"
+                                    maxlength="10"
+                                    placeholder="12345"
+                                    pattern="\d{5}(-\d{4})?"
+                                    title="Enter a ZIP code such as 32114 or 32114-1234."
+                                >
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Contact Details</legend>
+
+                        <div class="form-grid two-columns">
+                            <div class="form-group">
+                                <label for="phone">
+                                    Phone Number <span aria-hidden="true">*</span>
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    autocomplete="tel"
+                                    required
+                                    inputmode="numeric"
+                                    maxlength="13"
+                                    placeholder="(000)000-0000"
+                                    pattern="\(\d{3}\)\d{3}-\d{4}"
+                                    title="Enter a 10-digit phone number in the format (000)000-0000."
+                                >
+                                <small>Format: (000)000-0000</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">
+                                    Email Address <span aria-hidden="true">*</span>
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    autocomplete="email"
+                                    required
+                                    placeholder="name@example.com"
+                                >
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Your Message</legend>
+
+                        <div class="form-group">
+                            <label for="message">
+                                Message <span aria-hidden="true">*</span>
+                            </label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                required
+                                minlength="10"
+                                maxlength="1000"
+                                placeholder="Enter your message here..."
+                            ></textarea>
+                            <small>
+                                Enter at least 10 characters and no more than
+                                1,000 characters.
+                            </small>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Security Check</legend>
+
+                        <div class="form-group">
+                            <label for="securityAnswer">
+                                What is <span id="securityQuestion">7 + 5</span>?
+                                <span aria-hidden="true">*</span>
+                            </label>
+                            <input
+                                type="number"
+                                id="securityAnswer"
+                                name="securityAnswer"
+                                required
+                                inputmode="numeric"
+                                placeholder="Enter your answer"
+                            >
+                            <small>
+                                This quick question helps reduce automated submissions.
+                            </small>
+                        </div>
+                    </fieldset>
+
+                    <p class="required-note">
+                        <span aria-hidden="true">*</span> Required field
+                    </p>
+
+                    <div class="button-row">
+                        <button type="reset" class="secondary-button">
+                            Clear Form
+                        </button>
+
+                        <button type="submit" class="primary-button">
+                            Review Information
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Elliott Page | Web Systems Assignment</p>
+        </div>
+    </footer>
+
+    <script src="form.js"></script>
+</body>
+</html>
