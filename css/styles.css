@@ -593,4 +593,13 @@ a:focus {
   .battery-page .chart-container {
     height: 320px;
   }
+  .battery-page .chart-container canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+.battery-page .table-container {
+    width: 100%;
+    overflow-x: auto;
+}
 }
