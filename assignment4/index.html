@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battery Charge Decay Calculator | Assignment 4</title>
+
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="battery-page">
+  <header class="site-header">
+  <div class="container">
+    <h1>Battery Charge Decay Calculator</h1>
+
+    <a class="button" href="../index.html">Return to Main Website</a>
+  </div>
+</header>
+
+  <main>
+    <section class="card">
+      <h2>Assignment 4</h2>
+
+      <p>
+        This calculator estimates battery charge over time using a simplified
+        exponential-decay model. Enter values for the initial charge,
+        discharge rate, and time range, then calculate and plot the results.
+      </p>
+
+      <p class="equation">
+        y = A e<sup>-kx</sup>
+      </p>
+
+      <p>
+        <strong>A</strong> is the initial battery charge percentage,
+        <strong>k</strong> is the discharge rate per hour,
+        <strong>x</strong> is elapsed time in hours, and
+        <strong>y</strong> is the estimated remaining battery charge.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Calculator Inputs</h2>
+
+      <form id="batteryForm">
+        <div class="input-grid">
+          <div>
+            <label for="initialCharge">Initial battery charge, A (%)</label>
+
+            <input
+              type="number"
+              id="initialCharge"
+              name="initialCharge"
+              value="100"
+              min="1"
+              max="100"
+              step="1"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="decayRate">Discharge rate, k (per hour)</label>
+
+            <input
+              type="number"
+              id="decayRate"
+              name="decayRate"
+              value="0.08"
+              min="0.01"
+              max="1"
+              step="0.01"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="startTime">Start time (hours)</label>
+
+            <input
+              type="number"
+              id="startTime"
+              name="startTime"
+              value="0"
+              min="0"
+              step="0.1"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="endTime">End time (hours)</label>
+
+            <input
+              type="number"
+              id="endTime"
+              name="endTime"
+              value="24"
+              min="0.1"
+              step="0.1"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="timeStep">Plot interval (hours)</label>
+
+            <input
+              type="number"
+              id="timeStep"
+              name="timeStep"
+              value="1"
+              min="0.1"
+              max="24"
+              step="0.1"
+              required
+            >
+          </div>
+        </div>
+
+        <div class="button-row">
+          <button type="submit">Calculate and Plot</button>
+          <button type="reset">Reset Values</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Calculation Results</h2>
+
+      <div id="results" aria-live="polite">
+        Enter values and select <strong>Calculate and Plot</strong>.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Battery Charge Plot</h2>
+
+      <div class="chart-container">
+        <canvas id="batteryChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Assignment 4 &mdash; JavaScript Calculator with Plotting</p>
+  </footer>
+
+  <script>
+    const batteryForm = document.getElementById("batteryForm");
+    const results = document.getElementById("results");
+    const batteryChartCanvas = document.getElementById("batteryChart");
+
+    let batteryChart;
+
+    function calculateBatteryCharge(initialCharge, decayRate, time) {
+      return initialCharge * Math.exp(-decayRate * time);
+    }
+
+    function displayError(message) {
+      results.innerHTML = `<p class="error-message">Error: ${message}</p>`;
+    }
+
+    batteryForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const initialCharge = Number(
+        document.getElementById("initialCharge").value
+      );
+
+      const decayRate = Number(
+        document.getElementById("decayRate").value
+      );
+
+      const startTime = Number(
+        document.getElementById("startTime").value
+      );
+
+      const endTime = Number(
+        document.getElementById("endTime").value
+      );
+
+      const timeStep = Number(
+        document.getElementById("timeStep").value
+      );
+
+      if (
+        !Number.isFinite(initialCharge) ||
+        !Number.isFinite(decayRate) ||
+        !Number.isFinite(startTime) ||
+        !Number.isFinite(endTime) ||
+        !Number.isFinite(timeStep)
+      ) {
+        displayError("All fields must contain valid numbers.");
+        return;
+      }
+
+      if (initialCharge <= 0 || initialCharge > 100) {
+        displayError(
+          "Initial battery charge must be greater than 0 and no more than 100."
+        );
+        return;
+      }
+
+      if (decayRate <= 0) {
+        displayError("Discharge rate must be greater than zero.");
+        return;
+      }
+
+      if (startTime < 0) {
+        displayError("Start time cannot be negative.");
+        return;
+      }
+
+      if (endTime <= startTime) {
+        displayError("End time must be greater than start time.");
+        return;
+      }
+
+      if (timeStep <= 0) {
+        displayError("Plot interval must be greater than zero.");
+        return;
+      }
+
+      const timeLabels = [];
+      const chargeValues = [];
+
+      let output = `
+        <p><strong>Equation:</strong> y = A e<sup>-kx</sup></p>
+        <p><strong>Initial charge:</strong> ${initialCharge.toFixed(2)}%</p>
+        <p><strong>Discharge rate:</strong> ${decayRate.toFixed(3)} per hour</p>
+        <p><strong>Time range:</strong> ${startTime.toFixed(1)} to ${endTime.toFixed(1)} hours</p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Time (hours)</th>
+                <th>Estimated charge (%)</th>
+              </tr>
+            </thead>
+
+            <tbody>
+      `;
+
+      let pointCount = 0;
+
+      for (
+        let time = startTime;
+        time <= endTime + 0.000001;
+        time += timeStep
+      ) {
+        const charge = calculateBatteryCharge(
+          initialCharge,
+          decayRate,
+          time
+        );
+
+        timeLabels.push(time.toFixed(1));
+        chargeValues.push(charge.toFixed(2));
+
+        output += `
+          <tr>
+            <td>${time.toFixed(1)}</td>
+            <td>${charge.toFixed(2)}</td>
+          </tr>
+        `;
+
+        pointCount += 1;
+
+        if (pointCount > 500) {
+          displayError(
+            "Please use a larger plot interval or a smaller time range. The calculator allows a maximum of 500 plotted points."
+          );
+          return;
+        }
+      }
+
+      output += `
+            </tbody>
+          </table>
+        </div>
+      `;
+
+      results.innerHTML = output;
+
+      if (batteryChart) {
+        batteryChart.destroy();
+      }
+
+      batteryChart = new Chart(batteryChartCanvas, {
+        type: "line",
+
+        data: {
+          labels: timeLabels,
+
+          datasets: [{
+            label: "Estimated Battery Charge (%)",
+            data: chargeValues,
+            borderColor: "#176b3a",
+            backgroundColor: "rgba(23, 107, 58, 0.15)",
+            borderWidth: 3,
+            fill: true,
+            tension: 0.2,
+            pointRadius: 3,
+            pointHoverRadius: 6
+          }]
+        },
+
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+
+          plugins: {
+            title: {
+              display: true,
+              text: "Battery Charge Decay Over Time",
+              font: {
+                size: 18
+              }
+            },
+
+            legend: {
+              display: true,
+              position: "top"
+            },
+
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  return `Charge: ${context.parsed.y.toFixed(2)}%`;
+                }
+              }
+            }
+          },
+
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: "Time (hours)"
+              }
+            },
+
+            y: {
+              title: {
+                display: true,
+                text: "Estimated Battery Charge (%)"
+              },
+              min: 0,
+              max: 100
+            }
+          }
+        }
+      });
+    });
+
+    batteryForm.addEventListener("reset", function () {
+      results.innerHTML =
+        "Values reset. Select <strong>Calculate and Plot</strong> to create a new table and graph.";
+
+      if (batteryChart) {
+        batteryChart.destroy();
+        batteryChart = null;
+      }
+    });
+  </script>
+</body>
+</html>
