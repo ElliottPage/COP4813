@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spirograph Generator | Assignment 5</title>
+
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="battery-page">
+  <header class="site-header">
+    <div class="container">
+      <h1>Spirograph Generator</h1>
+
+      <a class="button" href="../index.html">Home</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Assignment 5</h2>
+
+      <p>
+        This page uses the HTML5 canvas and JavaScript to create a random
+        Spirograph pattern. Select the button to generate a new design.
+      </p>
+
+      <p class="equation">
+        x = (R + r) cos(t) - (r + O) cos(((R + r) / r)t)
+      </p>
+
+      <p class="equation">
+        y = (R + r) sin(t) - (r + O) sin(((R + r) / r)t)
+      </p>
+
+      <p>
+        <strong>R</strong> is the fixed outer-circle radius,
+        <strong>r</strong> is the rotating inner-circle radius,
+        <strong>O</strong> is the pen offset, and
+        <strong>t</strong> increases as the pattern is drawn.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Create a Pattern</h2>
+
+      <p>
+        Every time you click the button, the program chooses new random
+        values for the Spirograph variables.
+      </p>
+
+      <div class="button-row">
+        <button id="drawButton" type="button">Draw Spirograph</button>
+      </div>
+
+      <p id="statusMessage" aria-live="polite">
+        Select “Draw Spirograph” to create a pattern.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Spirograph Canvas</h2>
+
+      <div class="canvas-container">
+        <canvas
+          id="spiroCanvas"
+          width="700"
+          height="500"
+          aria-label="A canvas where a randomly generated Spirograph pattern is drawn"
+        >
+          Your browser does not support the HTML canvas element.
+        </canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Assignment 5 - HTML5 Canvas and JavaScript Spirograph</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

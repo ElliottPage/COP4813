@@ -602,4 +602,25 @@ a:focus {
     width: 100%;
     overflow-x: auto;
 }
+
+}.canvas-container {
+  width: 100%;
+  overflow-x: auto;
+  text-align: center;
+}
+
+#spiroCanvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto 0;
+  background-color: #ffffff;
+  border: 2px solid #176b3a;
+  border-radius: 8px;
+}
+
+#statusMessage {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #176b3a;
 }
