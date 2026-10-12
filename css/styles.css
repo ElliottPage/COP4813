@@ -202,9 +202,7 @@ a:focus {
     margin: 0;
 }
 
-/* =========================
-   Contact Form Styles
-   ========================= */
+/* Contact Form Styles */
 
 .form-page {
     padding: 3.5rem 0;
@@ -385,9 +383,7 @@ a:focus {
     background-color: #fef2f2;
 }
 
-/* =========================
-   Mobile Styles
-   ========================= */
+/* Mobile Styles */
 
 @media (max-width: 700px) {
     .hero-layout,
@@ -419,208 +415,215 @@ a:focus {
         width: 100%;
     }
 }
-    /* Assignment 4: Battery Charge Decay Calculator */
+
+/* Assignment 4: Battery Charge Decay Calculator */
 
 .battery-page {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  color: #1f2937;
-  background-color: #f3f6fa;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background-color: #f3f6fa;
 }
 
 .battery-page * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .battery-page header {
-  padding: 1.25rem;
-  color: white;
-  text-align: center;
-  background-color: #12355b;
+    padding: 1.25rem;
+    color: white;
+    text-align: center;
+    background-color: #12355b;
 }
 
 .battery-page header h1 {
-  margin: 0;
-  font-size: 1.8rem;
+    margin: 0;
+    font-size: 1.8rem;
 }
 
+/* Remove the gap above the Home navigation bar. */
 .battery-page nav {
-  margin-top: 0.5rem;
+    margin-top: 0;
 }
 
 .battery-page nav a {
-  color: white;
-  font-weight: bold;
+    color: white;
+    font-weight: bold;
 }
 
 .battery-page main {
-  width: min(100% - 2rem, 1000px);
-  margin: 2rem auto;
+    width: min(100% - 2rem, 1000px);
+    margin: 2rem auto;
 }
 
 .battery-page .card {
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .battery-page h2 {
-  margin-top: 0;
-  color: #12355b;
+    margin-top: 0;
+    color: #12355b;
 }
 
 .battery-page .equation {
-  padding: 0.75rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-  background-color: #e8f1fb;
-  border-radius: 6px;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #e8f1fb;
+    border-radius: 6px;
 }
 
 .battery-page .input-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
 }
 
 .battery-page label {
-  display: block;
-  margin-bottom: 0.35rem;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: bold;
 }
 
 .battery-page input {
-  width: 100%;
-  padding: 0.65rem;
-  font-size: 1rem;
-  border: 1px solid #9ca3af;
-  border-radius: 5px;
+    width: 100%;
+    padding: 0.65rem;
+    font-size: 1rem;
+    border: 1px solid #9ca3af;
+    border-radius: 5px;
 }
 
 .battery-page .button-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
 }
 
 .battery-page button {
-  padding: 0.7rem 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
 }
 
 .battery-page button[type="submit"] {
-  color: white;
-  background-color: #176b3a;
+    color: white;
+    background-color: #176b3a;
 }
 
 .battery-page button[type="submit"]:hover {
-  background-color: #0f4d29;
+    background-color: #0f4d29;
 }
 
 .battery-page button[type="reset"] {
-  color: #1f2937;
-  background-color: #d9e1e8;
+    color: #1f2937;
+    background-color: #d9e1e8;
 }
 
 .battery-page button[type="reset"]:hover {
-  background-color: #bdc8d3;
+    background-color: #bdc8d3;
 }
 
 .battery-page .error-message {
-  color: #b91c1c;
-  font-weight: bold;
+    color: #b91c1c;
+    font-weight: bold;
 }
 
 .battery-page .table-container {
-  max-height: 350px;
-  margin-top: 1rem;
-  overflow-y: auto;
+    max-height: 350px;
+    margin-top: 1rem;
+    overflow-y: auto;
 }
 
 .battery-page table {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .battery-page th,
 .battery-page td {
-  padding: 0.6rem;
-  text-align: left;
-  border: 1px solid #cbd5e1;
+    padding: 0.6rem;
+    text-align: left;
+    border: 1px solid #cbd5e1;
 }
 
 .battery-page th {
-  color: white;
-  background-color: #12355b;
+    color: white;
+    background-color: #12355b;
 }
 
 .battery-page tr:nth-child(even) {
-  background-color: #f1f5f9;
+    background-color: #f1f5f9;
 }
 
 .battery-page .chart-container {
-  position: relative;
-  height: 450px;
-  max-width: 900px;
+    position: relative;
+    height: 450px;
+    max-width: 900px;
 }
 
 .battery-page footer {
-  padding: 1rem;
-  color: white;
-  text-align: center;
-  background-color: #12355b;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    background-color: #12355b;
 }
 
 @media (max-width: 600px) {
-  .battery-page main {
-    width: min(100% - 1rem, 1000px);
-    margin: 1rem auto;
-  }
+    .battery-page main {
+        width: min(100% - 1rem, 1000px);
+        margin: 1rem auto;
+    }
 
-  .battery-page .card {
-    padding: 1rem;
-  }
+    .battery-page .card {
+        padding: 1rem;
+    }
 
-  .battery-page .chart-container {
-    height: 320px;
-  }
-  .battery-page .chart-container canvas {
-    display: block;
-    width: 100% !important;
-    height: 100% !important;
+    .battery-page .chart-container {
+        height: 320px;
+    }
+
+    .battery-page .chart-container canvas {
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .battery-page .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
 }
-.battery-page .table-container {
+
+/* Assignment 5: Spirograph */
+
+.canvas-container {
     width: 100%;
     overflow-x: auto;
-}
-
-}.canvas-container {
-  width: 100%;
-  overflow-x: auto;
-  text-align: center;
+    text-align: center;
 }
 
 #spiroCanvas {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 1rem auto 0;
-  background-color: #ffffff;
-  border: 2px solid #176b3a;
-  border-radius: 8px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto 0;
+    background-color: #ffffff;
+    border: 2px solid #176b3a;
+    border-radius: 8px;
 }
 
 #statusMessage {
-  margin-top: 1rem;
-  font-weight: bold;
-  color: #176b3a;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #176b3a;
 }

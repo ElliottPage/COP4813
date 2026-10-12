@@ -1,0 +1,127 @@
+/* Widen only this assignment's main content area. */
+#main-content > .container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Allow the game panel to use the available width. */
+#main-content .form-card {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+}
+
+/* Individual card appearance. */
+.playing-card {
+    display: block;
+    box-sizing: border-box;
+    width: 142px;
+    height: 190px;
+    padding: 0;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    border: 1px solid #777777;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hand and discard pile share the green playing surface. */
+.card-table {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 142px;
+    gap: 28px;
+    align-items: start;
+    margin-top: 20px;
+    padding: 24px;
+    background-color: #176b45;
+    border-radius: 12px;
+}
+
+.card-table h3 {
+    margin: 0 0 16px;
+    color: #ffffff;
+}
+
+.hand-section {
+    min-width: 0;
+}
+
+/* Horizontal hand, with wrapping when needed. */
+.card-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 12px;
+    min-height: 190px;
+    padding-bottom: 12px;
+}
+
+/* Status message above the table. */
+#game-message {
+    margin-top: 16px;
+}
+
+/* Discard section on the right. */
+.discard-section {
+    margin: 0;
+    width: 142px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Keep the drop box directly below its heading. */
+.discard-section h3 {
+    order: 0;
+}
+
+.discard-pile {
+    order: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 142px;
+    height: 190px;
+    padding: 0;
+    background-color: #eef2f6;
+    border: 3px dashed #526477;
+    border-radius: 8px;
+}
+
+#discard-placeholder {
+    margin: 0;
+    padding: 12px;
+    color: #334155;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Instructions and counter sit below the drop box. */
+#discard-instructions {
+    order: 2;
+    margin: 12px 0 0;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.discard-counter {
+    order: 3;
+    margin: 12px 0 0;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+/* Stack the sections on smaller screens without a scrollbar. */
+@media (max-width: 1050px) {
+    .card-table {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="An interactive card-dealing and drag-and-drop demonstration."
+    >
+
+    <title>Assignment 7 - Drag and Drop | Web Systems</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="cards.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <header class="site-header">
+        <div class="container">
+            <p class="site-label">Web Systems</p>
+
+            <h1>Assignment 7 - Drag and Drop</h1>
+
+            <p class="tagline">
+                Deal a hand of cards, then drag cards to the discard pile.
+            </p>
+        </div>
+    </header>
+
+    <nav class="site-navigation" aria-label="Main navigation">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="form-page">
+        <div class="container">
+            <section class="form-card" aria-labelledby="game-heading">
+                <header class="form-header">
+                    <h2 id="game-heading">Card Drag and Drop</h2>
+
+                    <p>
+                        Click Deal to start a new five card hand.
+                        Drag cards into the discard pile to remove them
+                        from your hand. Each drop updates the message
+                        and discard counter.
+                    </p>
+                </header>
+
+                <div class="button-row">
+                    <button
+                        id="deal-button"
+                        type="button"
+                        class="primary-button"
+                    >
+                        Deal
+                    </button>
+                </div>
+
+                <p id="game-message" role="status">
+                    Click Deal to start a new hand.
+                </p>
+
+                <div class="card-table">
+                    <section
+                        class="hand-section"
+                        aria-labelledby="hand-heading"
+                    >
+                        <h3 id="hand-heading">Your Hand</h3>
+
+                        <div id="player-hand" class="card-area"></div>
+                    </section>
+
+                    <section
+                        class="discard-section"
+                        aria-labelledby="discard-heading"
+                    >
+                        <h3 id="discard-heading">Discard Pile</h3>
+
+                        <div
+                            id="discard-pile"
+                            class="discard-pile"
+                            aria-labelledby="discard-heading"
+                        >
+                            <p id="discard-placeholder">
+                                Drop cards here
+                            </p>
+                        </div>
+
+                        <p class="discard-counter">
+                            Cards discarded:
+                            <span id="discard-count">0</span>
+                        </p>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Elliott Page. COP4813 Web Programming Portfolio.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,88 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>2024 NFL Game Scores | Assignment 6</title>
+    <title>2024 NFL Game Scores | Assignment 6</title>
 
-  <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 
-  <script src="script.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body class="battery-page json-page">
-  <header class="site-header">
-    <div class="container">
-      <h1>2024 NFL Game Scores</h1>
+    <header class="site-header">
+        <div class="container">
+            <h1>2024 NFL Game Scores</h1>
+        </div>
+    </header>
 
-      <a class="button" href="../index.html">Home</a>
-    </div>
-  </header>
+    <nav class="site-navigation" aria-label="Main navigation">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <main>
-    <section class="card">
-      <h2>Assignment 6</h2>
+    <main>
+        <section class="card">
+            <h2>Assignment 6</h2>
 
-      <p>
-        This page displays regular-season and playoff results from
-        the 2024 NFL season. Game data is read from an external JSON
-        file and displayed in a formatted table.
-      </p>
+            <p>
+                This page displays regular-season and playoff results from
+                the 2024 NFL season. Game data is read from an external JSON
+                file and displayed in a formatted table.
+            </p>
 
-      <p>
-        Each result includes the week or playoff round, game date,
-        away team, home team, final scores, and whether the game
-        went into overtime.
-      </p>
-    </section>
+            <p>
+                Each result includes the week or playoff round, game date,
+                away team, home team, final scores, and whether the game
+                went into overtime.
+            </p>
+        </section>
 
-    <section class="card">
-      <h2>Game Results</h2>
+        <section class="card">
+            <h2>Game Results</h2>
 
-      <p id="load-status" role="status">
-        Game data will appear here once the JavaScript is connected.
-      </p>
+            <p id="load-status" role="status">
+                Loading game data…
+            </p>
 
-      <div class="table-container">
-        <table id="scores-table" hidden>
-          <caption>
-            2024 NFL regular-season and playoff results
-          </caption>
+            <div class="table-container">
+                <table id="scores-table" hidden>
+                    <caption>
+                        2024 NFL regular-season and playoff results
+                    </caption>
 
-          <thead>
-            <tr>
-              <th scope="col">Week / Round</th>
-              <th scope="col">Date</th>
-              <th scope="col">Away Team</th>
-              <th scope="col">Away Score</th>
-              <th scope="col">Home Team</th>
-              <th scope="col">Home Score</th>
-              <th scope="col">Overtime</th>
-            </tr>
-          </thead>
+                    <thead>
+                        <tr>
+                            <th scope="col">Week / Round</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Away Team</th>
+                            <th scope="col">Away Score</th>
+                            <th scope="col">Home Team</th>
+                            <th scope="col">Home Score</th>
+                            <th scope="col">Overtime</th>
+                        </tr>
+                    </thead>
 
-          <tbody id="scores-body"></tbody>
-        </table>
-      </div>
-    </section>
+                    <tbody id="scores-body"></tbody>
+                </table>
+            </div>
+        </section>
 
-    <section class="card">
-      <h2>JSON Data File</h2>
+        <section class="card">
+            <h2>JSON Data File</h2>
 
-      <p>
-        The game results are stored separately from this webpage
-        in NFL-2024-Game-Scores.json.
-      </p>
+            <p>
+                The game results are stored separately from this webpage
+                in NFL-2024-Game-Scores.json.
+            </p>
 
-      <p>
-        <a href="NFL-2024-Game-Scores.json">View the JSON data</a>
-      </p>
-    </section>
-  </main>
+            <p>
+                <a href="NFL-2024-Game-Scores.json">View the JSON data</a>
+            </p>
+        </section>
+    </main>
 
-  <footer>
-    <p>Assignment 6 &mdash; JSON Game Scores</p>
-  </footer>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Elliott Page. COP4813 Web Programming Portfolio.</p>
+        </div>
+    </footer>
 </body>
 </html>
