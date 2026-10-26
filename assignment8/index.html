@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="An interactive bouncing balloon canvas animation."
+    >
+
+    <title>Assignment 8 - Balloon Animation | Web Systems</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <header class="site-header">
+        <div class="container">
+            <p class="site-label">Web Systems</p>
+
+            <h1>Assignment 8 - Balloon Animation</h1>
+        </div>
+    </header>
+
+    <nav class="site-navigation" aria-label="Main navigation">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="form-page">
+        <div class="container">
+            <section class="form-card" aria-labelledby="balloon-heading">
+                <header class="form-header">
+                    <h2 id="balloon-heading">Bouncing Balloon</h2>
+
+                    <p>
+                        Watch the balloon move diagonally around the canvas. Click to make it pop.
+                        
+                    </p>
+                </header>
+
+                <canvas
+                    id="balloon-canvas"
+                    width="800"
+                    height="450"
+                    aria-label="An animated balloon moving around a rectangular canvas"
+                >
+                    Your browser does not support the canvas element.
+                </canvas>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Elliott Page. COP4813 Web Programming Portfolio.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
