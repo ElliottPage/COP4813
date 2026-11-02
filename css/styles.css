@@ -627,3 +627,75 @@ a:focus {
     font-weight: bold;
     color: #176b3a;
 }
+/* Mobile homepage refinements */
+
+.hero-layout > *,
+.card-grid > * {
+    min-width: 0;
+}
+
+.card,
+.resource-list {
+    overflow-wrap: anywhere;
+}
+
+.profile-image {
+    display: block;
+    height: auto;
+}
+
+/* Keep navigation text white when hovered or focused. */
+.nav-list a:hover,
+.nav-list a:focus {
+    color: var(--white);
+}
+
+/* Give assignment links a larger clickable area. */
+.card > a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.5rem 0;
+}
+
+/* Two assignment columns on medium sized screens. */
+@media (min-width: 701px) and (max-width: 1000px) {
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Smaller spacing on phones. */
+@media (max-width: 700px) {
+    .site-header {
+        padding: 1.75rem 0;
+    }
+
+    .hero {
+        padding: 2rem 0;
+    }
+
+    .hero-layout {
+        gap: 1.5rem;
+    }
+
+    .section {
+        padding: 2rem 0;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+
+    .nav-list a {
+        min-height: 48px;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

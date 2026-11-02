@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mobile Homepage Audit | Elliott Page</title>
+
+    <meta
+        name="description"
+        content="Mobile homepage and Lighthouse audit results
+        for Elliott Page's COP4813 portfolio."
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .audit-content {
+            padding: 2rem 0;
+        }
+
+        .audit-section {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow-wrap: anywhere;
+        }
+
+        .audit-section h2,
+        .audit-section h3 {
+            color: var(--navy);
+        }
+
+        .audit-section h2 {
+            margin-top: 0;
+        }
+
+        .score-list {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .score-list > div {
+            padding: 1rem;
+            background-color: var(--light-blue);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .score-list dt {
+            font-weight: bold;
+        }
+
+        .score-list dd {
+            margin: 0.5rem 0 0;
+            color: var(--navy);
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .audit-figure {
+            margin: 1.5rem 0 0;
+        }
+
+        .audit-figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--border);
+        }
+
+        .audit-figure figcaption {
+            margin-top: 0.75rem;
+        }
+
+        @media (max-width: 700px) {
+            .score-list {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .audit-section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <p class="site-label">COP4813 Portfolio</p>
+            <h1>Mobile Homepage and Lighthouse Audit</h1>
+           
+            </p>
+        </div>
+    </header>
+
+    <nav class="site-navigation" aria-label="Audit page navigation">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#mobiledesign">Mobile Design</a></li>
+                <li><a href="#results">Results</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="audit-content">
+        <div class="container">
+
+            <section id="mobiledesign" class="audit-section">
+                <h2>Mobile Homepage Design</h2>
+
+                <p>
+                    I chose to use a responsive interface rather than creating
+                    a separate mobile homepage. The same HTML page
+                    provides the content and navigation for both
+                    desktop and mobile visitors.
+                </p>
+
+                <ul>
+                    <li>
+                        The viewport meta tag sets the layout viewport
+                        to the device width.
+                    </li>
+                    <li>
+                        CSS media queries stack the hero content and
+                        assignment cards into one column on small screens.
+                    </li>
+                    <li>
+                        The mobile navigation displays the same four
+                        menu choices vertically: About Me, My Assignments,
+                        Skills, and Resources.
+                    </li>
+                    <li>
+                        The homepage image scales within its container.
+                    </li>
+                    <li>
+                        Standard HTML links provide navigation without
+                        a custom JavaScript menu.
+                    </li>
+                </ul>
+
+               
+
+                <p>
+                    I checked the homepage in Chrome's responsive
+                    preview at a width of 375 pixels. The navigation
+                    links stacked vertically, assignment cards appeared
+                    in one column, and all four navigation links
+                    reached their matching sections. The page fit
+                    within the screen without sideways scrolling.
+                </p>
+
+                
+            </section>
+
+            <section id="results" class="audit-section">
+                <h2>Overall Lighthouse Results</h2>
+
+                <dl class="score-list">
+                    <div>
+                        <dt>Performance</dt>
+                        <dd>100</dd>
+                    </div>
+
+                    <div>
+                        <dt>Accessibility</dt>
+                        <dd>100</dd>
+                    </div>
+
+                    <div>
+                        <dt>Best Practices</dt>
+                        <dd>100</dd>
+                    </div>
+
+                    <div>
+                        <dt>SEO</dt>
+                        <dd>100</dd>
+                    </div>
+                </dl>
+
+                <p>
+                    All four categories received a score of 100 in
+                    this audit. The report still included unscored
+                    recommendations and items requiring manual review,
+                    which are discussed below.
+                </p>
+
+                <figure class="audit-figure">
+                    <img
+                        src="images/lighthouse-overall.png"
+                        alt="Lighthouse results showing scores of 100 for
+                        Performance, Accessibility, Best Practices, and SEO."
+                    >
+                   
+                </figure>
+            </section>
+
+           
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                &copy; 2026 Elliott Page.
+                COP4813 Web Programming Portfolio.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
