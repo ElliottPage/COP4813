@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BSIT Course Advisor | Assignment 11</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="advisor.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body class="advisor-page">
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <header class="site-header">
+        <div class="container">
+            <p class="site-label">
+                Assignment 11 - Dynamic Objects
+            </p>
+
+            <h1>BSIT Course Advisor</h1>
+
+            <p class="tagline">
+                Review course options and build your next-term plan.
+            </p>
+        </div>
+    </header>
+
+    <nav class="site-navigation" aria-label="Main navigation">
+        <div class="container">
+            <ul class="nav-list">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="#completed-section">Completed Courses</a>
+                </li>
+
+                <li>
+                    <a href="#options-section">Course Options</a>
+                </li>
+
+                <li>
+                    <a href="#plan-section">My Plan</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="container advisor-main">
+        <section class="card advisor-intro">
+            <h2>About and How to Use</h2>
+
+            <p id="program-description">
+                Loading program information...
+            </p>
+
+            <p>
+                Check courses passed with a C or better, choose a term,
+                then drag eligible courses into My Plan or select
+                Add to Plan. Open Course Details for information and notes.
+            </p>
+
+            <p class="advisor-disclaimer">
+                This selected-course prototype is not a complete degree audit.
+                Verify availability before registering. Planned courses
+                do not satisfy prerequisites. Selections and notes clear
+                when the page reloads.
+                <a id="program-link" hidden>
+                    Official program guide
+                </a>
+            </p>
+
+            <div class="advisor-toolbar">
+                <label for="term-select">
+                    Planning term
+                </label>
+
+                <select id="term-select">
+                    <option value="Fall">Fall</option>
+                    <option value="Spring">Spring</option>
+                    <option value="Summer">Summer</option>
+                </select>
+
+                <button
+                    id="reset-button"
+                    class="secondary-button"
+                    type="button"
+                >
+                    Reset Advisor
+                </button>
+            </div>
+
+            <p
+                id="advisor-status"
+                role="status"
+                aria-live="polite"
+            >
+                Loading course data...
+            </p>
+        </section>
+
+        <section id="completed-section" class="card">
+            <h2>Completed Course History</h2>
+
+            <p>
+                Check all listed courses you have passed with a C or
+                better. Either statistics course satisfies the statistics
+                prerequisite; record both if you completed both.
+            </p>
+
+            <div
+                id="completed-list"
+                class="advisor-grid"
+            ></div>
+        </section>
+
+        <section id="options-section" class="card">
+            <h2>Course Options</h2>
+
+            <p>
+                 Options update based on your completed courses and term.
+                Choose one program elective: CAP3744 or COP4709.
+                Only one is needed for that requirement.
+            </p>
+
+            <div
+                id="course-list"
+                class="advisor-grid"
+            ></div>
+        </section>
+
+        <section id="plan-section" class="card">
+            <h2>My Plan</h2>
+
+            <p>
+                Drop eligible cards here or use Add to Plan.
+            </p>
+
+            <div
+                id="plan-dropzone"
+                class="plan-dropzone"
+            >
+                <p id="plan-summary">
+                    No courses planned.
+                </p>
+
+                <div
+                    id="plan-list"
+                    class="advisor-grid"
+                ></div>
+            </div>
+        </section>
+
+        <noscript>
+            <p class="error-message">
+                JavaScript must be enabled to use this advisor.
+            </p>
+        </noscript>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                &copy; 2026 Elliott Page.
+                COP4813 Web Programming Portfolio.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

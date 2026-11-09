@@ -1,0 +1,275 @@
+/* Assignment 11 - Compact BSIT Course Advisor */
+
+.advisor-page {
+    background-color: #f3f6fa;
+}
+
+/* Header and navigation */
+
+.advisor-page .site-header {
+    padding: 1.1rem 0;
+}
+
+.advisor-page .site-header h1 {
+    margin: 0.15rem 0;
+    font-size: clamp(1.7rem, 4vw, 2.3rem);
+}
+
+.advisor-page .tagline {
+    font-size: 1rem;
+}
+
+.advisor-page .nav-list a {
+    padding: 0.65rem 0.85rem;
+}
+
+/* Main page layout */
+
+.advisor-page .advisor-main {
+    margin: 1rem auto;
+}
+
+.advisor-page main > .card {
+    margin-bottom: 0.85rem;
+    padding: 1rem;
+}
+
+.advisor-page h2,
+.advisor-page h3 {
+    color: var(--navy);
+}
+
+.advisor-page main h2 {
+    margin: 0 0 0.45rem;
+    font-size: 1.3rem;
+}
+
+.advisor-page main p {
+    margin: 0.45rem 0;
+}
+
+.advisor-page .advisor-disclaimer {
+    color: #4b5563;
+    font-size: 0.9rem;
+}
+
+/* Planning controls */
+
+.advisor-page .advisor-toolbar,
+.advisor-page .course-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.advisor-page .advisor-toolbar {
+    margin-top: 0.75rem;
+}
+
+.advisor-page label {
+    font-weight: bold;
+}
+
+.advisor-page select,
+.advisor-page textarea {
+    padding: 0.45rem 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background-color: var(--white);
+    color: var(--dark-text);
+    font: inherit;
+}
+
+.advisor-page .advisor-toolbar button {
+    padding: 0.45rem 0.7rem;
+}
+
+.advisor-page #advisor-status {
+    margin: 0.65rem 0 0;
+    padding: 0.45rem 0.65rem;
+    border-left: 4px solid var(--navy);
+    background-color: var(--light-blue);
+    font-size: 0.95rem;
+}
+
+/* Dynamically generated course cards */
+
+.advisor-page .advisor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.75rem;
+}
+
+.advisor-page .advisor-grid > * {
+    min-width: 0;
+}
+
+.advisor-page .course-card {
+    min-width: 0;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--white);
+    overflow-wrap: anywhere;
+}
+
+.advisor-page .course-card h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.advisor-page .course-card p {
+    margin: 0.35rem 0;
+    font-size: 0.95rem;
+}
+
+.advisor-page .course-status {
+    font-weight: bold;
+}
+
+.advisor-page .is-ready {
+    color: #176b3a;
+}
+
+.advisor-page .is-locked {
+    color: #9b2c20;
+}
+
+/* Completed-course checkboxes */
+
+.advisor-page .completion-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.advisor-page input[type="checkbox"] {
+    width: 1.1rem;
+    height: 1.1rem;
+    flex-shrink: 0;
+    margin: 0.2rem 0 0;
+}
+
+/* Course action buttons */
+
+.advisor-page .course-actions {
+    margin-top: 0.55rem;
+}
+
+.advisor-page .course-actions button {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.9rem;
+}
+
+.advisor-page button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Course details and personal notes */
+
+.advisor-page details {
+    margin-top: 0.55rem;
+    padding-top: 0.45rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+
+.advisor-page summary {
+    color: var(--navy);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.advisor-page textarea {
+    display: block;
+    width: 100%;
+    min-height: 65px;
+    margin-top: 0.4rem;
+    padding: 0.45rem;
+    resize: vertical;
+}
+
+/* Drag-and-drop planning */
+
+.advisor-page .course-card[draggable="true"] {
+    border-left: 5px solid #176b3a;
+    cursor: grab;
+}
+
+.advisor-page .course-card[draggable="true"]:active {
+    cursor: grabbing;
+}
+
+.advisor-page .plan-dropzone {
+    min-height: 110px;
+    padding: 0.75rem;
+    border: 3px dashed var(--blue);
+    border-radius: 8px;
+    background-color: var(--light-blue);
+}
+
+.advisor-page .plan-dropzone.is-over {
+    border-color: #176b3a;
+    background-color: #d5eaff;
+}
+
+/* Keyboard focus */
+
+.advisor-page button:focus-visible,
+.advisor-page input:focus-visible,
+.advisor-page select:focus-visible,
+.advisor-page textarea:focus-visible,
+.advisor-page summary:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+}
+
+/* Footer */
+
+.advisor-page .site-footer {
+    padding: 1rem 0;
+}
+
+/* Desktop layout */
+
+@media (min-width: 901px) {
+    .advisor-page #completed-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .advisor-page #course-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Tablet layout */
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .advisor-page #completed-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Phone layout */
+
+@media (max-width: 600px) {
+    .advisor-page .advisor-grid,
+    .advisor-page #completed-list,
+    .advisor-page #course-list {
+        grid-template-columns: 1fr;
+    }
+
+    .advisor-page .advisor-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .advisor-page .course-actions button {
+        width: 100%;
+    }
+}

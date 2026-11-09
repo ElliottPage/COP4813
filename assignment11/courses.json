@@ -1,0 +1,106 @@
+{
+  "program": {
+    "name": "Daytona State College - BS in Information Technology",
+    "catalog": "2026-2027",
+    "scope": "Selected BSIT courses with two program-elective options",
+    "url": "https://daytonastate.smartcatalogiq.com/en/2026-2027/college-catalog/program-guides/bs-degree/information-technology-bsit-b-s-degree"
+  },
+  "selectionGroups": [
+    {
+      "id": "statistics",
+      "note": "Either statistics course satisfies the CAP3744 statistics prerequisite. Record both if you completed both; an OR prerequisite does not prohibit taking both."
+    },
+    {
+      "id": "program-elective",
+      "note": "Choose one 3-credit program elective. CAP3744 and COP4709 are two approved options shown by this advisor, not the full elective list. Only one is needed for this requirement. Selecting or completing one disables the other planning option, but both can still be recorded in completed history."
+    }
+  ],
+  "courses": [
+    {
+      "id": "COP3530",
+      "title": "Data Structures",
+      "credits": 3,
+      "role": "transcript",
+      "notes": "Record prior completion here. This tool does not evaluate admission to this course."
+    },
+    {
+      "id": "COP4708",
+      "title": "Applied Database I",
+      "credits": 3,
+      "role": "transcript",
+      "notes": "Record prior completion here. This tool does not evaluate admission to this course."
+    },
+    {
+      "id": "STA2023",
+      "title": "Statistics option - STA2023",
+      "credits": 3,
+      "role": "transcript",
+      "selectionGroup": "statistics",
+      "notes": "One of the statistics alternatives accepted by the CAP3744 prerequisite rule. You may record both statistics alternatives if you completed both."
+    },
+    {
+      "id": "EGN3443",
+      "title": "Probability and Statistics for Engineers",
+      "credits": 3,
+      "role": "transcript",
+      "selectionGroup": "statistics",
+      "notes": "The BSIT program guide recommends EGN3443 for its statistics requirement. You may record both statistics alternatives if you completed both."
+    },
+    {
+      "id": "CEN4801",
+      "title": "Systems Integration",
+      "credits": 3,
+      "role": "planning",
+      "prerequisites": {
+        "all": [
+          "COP4708",
+          "COP3530"
+        ]
+      },
+      "offered": null,
+      "notes": "Required BSIT course. The offering pattern has not been verified in this data set; check the current schedule before registering.",
+      "catalogUrl": "https://daytonastate.smartcatalogiq.com/en/2026-2027/college-catalog/course-descriptions/cen-computer-science/4000/cen4801"
+    },
+    {
+      "id": "CAP3744",
+      "title": "Data Analytics and Visualization",
+      "credits": 3,
+      "role": "planning",
+      "selectionGroup": "program-elective",
+      "planChoiceGroup": "program-elective",
+      "prerequisites": {
+        "all": [
+          "COP3530",
+          "COP4708",
+          {
+            "any": [
+              "STA2023",
+              "EGN3443"
+            ]
+          }
+        ]
+      },
+      "offered": [
+        "Fall"
+      ],
+      "notes": "Approved BSIT program elective. Choose this course or another approved elective to fill the 3-credit program-elective requirement. You do not need both this course and COP4709 for that requirement. Catalog offering pattern: Fall.",
+      "catalogUrl": "https://daytonastate.smartcatalogiq.com/en/2026-2027/college-catalog/course-descriptions/cap-computer-science/3000/cap3744"
+    },
+    {
+      "id": "COP4709",
+      "title": "Applied Database II",
+      "credits": 3,
+      "role": "planning",
+      "selectionGroup": "program-elective",
+      "planChoiceGroup": "program-elective",
+      "prerequisites": {
+        "all": [
+          "COP4708"
+        ]
+      },
+      "offered": null,
+      "notes": "Approved BSIT program elective. Choose this course or another approved elective to fill the 3-credit program-elective requirement. You do not need both this course and CAP3744 for that requirement. The catalog entry does not specify an offering term; verify the current schedule.",
+      "catalogUrl": "https://daytonastate.smartcatalogiq.com/en/2026-2027/college-catalog/course-descriptions/cop-computer-science/4000/cop4709"
+    }
+  ]
+}
