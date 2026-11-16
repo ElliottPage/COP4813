@@ -1,0 +1,171 @@
+[
+  {
+    "Name": "WordPress",
+    "Support": [
+      {
+        "text": "Open source CMS developed and maintained by the WordPress contributor community."
+      }
+    ],
+    "Technology": [
+      {
+        "text": "Server: PHP.\nDatabase: MySQL or MariaDB.\nBrowser: HTML, CSS, and JavaScript."
+      }
+    ],
+    "Capabilities": [
+      {
+        "text": "Themes and block editing let users customize website layouts and publish content."
+      },
+      {
+        "text": "Plugins extend the CMS with additional website functionality."
+      }
+    ],
+    "Limitations": [
+      {
+        "text": "Outdated or vulnerable plugins can expose the website to attacks. Administrators must maintain updates and remove unused plugins."
+      },
+      {
+        "text": "Poorly implemented plugins or themes can cause excessive database activity. Under heavy traffic, excessive database connections can overload the server and reduce website performance."
+      }
+    ],
+    "Examples": [
+      {
+        "text": "NASA",
+        "url": "https://www.nasa.gov/"
+      }
+    ]
+  },
+  {
+    "Name": "Drupal",
+    "Support": [
+      {
+        "text": "Open source CMS developed by the Drupal community, with community infrastructure and project support from the Drupal Association."
+      }
+    ],
+    "Technology": [
+      {
+        "text": "Server: PHP.\nDatabase: MySQL, MariaDB, PostgreSQL, or SQLite.\nBrowser: HTML, CSS, and JavaScript."
+      }
+    ],
+    "Capabilities": [
+      {
+        "text": "Custom content types and fields support structured content beyond basic blog posts."
+      },
+      {
+        "text": "Modules and themes extend functionality and appearance. User roles and permissions control access to content and administration."
+      }
+    ],
+    "Limitations": [
+      {
+        "text": "Major version upgrades require compatible contributed modules, themes, and custom code. Deprecated APIs must be identified and corrected before upgrading."
+      },
+      {
+        "text": "The core upgrade path does not support skipping major versions. A website several major versions behind must complete successive major upgrades."
+      }
+    ],
+    "Examples": [
+      {
+        "text": "USA.gov",
+        "url": "https://www.usa.gov/"
+      }
+    ]
+  },
+  {
+    "Name": "Joomla",
+    "Support": [
+      {
+        "text": "Open source CMS developed by the Joomla volunteer community and supported organizationally by Open Source Matters."
+      }
+    ],
+    "Technology": [
+      {
+        "text": "Server: PHP.\nDatabase: MySQL, MariaDB, or PostgreSQL.\nBrowser: HTML, CSS, and JavaScript."
+      }
+    ],
+    "Capabilities": [
+      {
+        "text": "Built in multilingual content management and access controls support websites with multiple languages and user groups."
+      },
+      {
+        "text": "Templates customize website appearance, while components, modules, and plugins add functionality."
+      }
+    ],
+    "Limitations": [
+      {
+        "text": "Third party extension incompatibility can block major version upgrades or require removing functionality. For Joomla 5 to 6, extensions must no longer depend on Joomla 5's backward compatibility plugin."
+      }
+    ],
+    "Examples": [
+      {
+        "text": "Vokoloko.cz",
+        "url": "https://vokoloko.cz/"
+      }
+    ]
+  },
+  {
+    "Name": "Ghost",
+    "Support": [
+      {
+        "text": "Open source publishing software maintained by the nonprofit Ghost Foundation. Ghost(Pro) provides paid managed hosting."
+      }
+    ],
+    "Technology": [
+      {
+        "text": "Server: JavaScript.\nDatabase: MySQL.\nBrowser: HTML, CSS, and JavaScript."
+      }
+    ],
+    "Capabilities": [
+      {
+        "text": "Built in publishing tools support posts, pages, and email newsletters."
+      },
+      {
+        "text": "Memberships and paid subscriptions support subscriber only content. APIs allow external applications and custom front ends to access content."
+      }
+    ],
+    "Limitations": [
+      {
+        "text": "Stripe is the only natively supported payment provider. Publishers unable to use Stripe cannot use the standard native payment setup, another provider requires third party automation or a custom API integration."
+      }
+    ],
+    "Examples": [
+      {
+        "text": "404 Media",
+        "url": "https://www.404media.co/"
+      }
+    ]
+  },
+  {
+    "Name": "Grav",
+    "Support": [
+      {
+        "text": "Open source CMS supported by its developer community. Professional services are available from Trilby Media."
+      }
+    ],
+    "Technology": [
+      {
+        "text": "Server: PHP with Twig templates.\nDatabase: None required, content and configuration use Markdown and YAML files.\nBrowser: HTML, CSS, and JavaScript."
+      }
+    ],
+    "Capabilities": [
+      {
+        "text": "Themes, plugins, and Twig templates support custom layouts and extended functionality."
+      },
+      {
+        "text": "Flat file content storage and multilingual support allow websites to be managed without setting up a database."
+      }
+    ],
+    "Limitations": [
+      {
+        "text": "File based page change detection can slow large websites. Disabling automatic change checking improves production performance, but changed pages no longer automatically trigger that cache refresh."
+      },
+      {
+        "text": "Performance depends heavily on PHP caching and filesystem speed. The documentation identifies PHP caching as critical and advises against network filesystems such as NFS."
+      }
+    ],
+    "Examples": [
+      {
+        "text": "Grav official website",
+        "url": "https://getgrav.org/"
+      }
+    ]
+  }
+]

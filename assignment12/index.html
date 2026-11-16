@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CMS Comparison | Elliott Page</title>
+
+    <meta
+        name="description"
+        content="A comparison of five content management systems, generated from an external JSON file using JavaScript."
+    >
+    <meta name="author" content="Elliott Page">
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="cms-page">
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <header class="site-header">
+        <div class="container">
+            <p class="site-label">COP4813 | Assignment 12</p>
+
+            <h1>Content Management Systems</h1>
+
+            <p class="tagline">
+                Comparing the capabilities of five CMS platforms.
+            </p>
+        </div>
+    </header>
+
+    <nav class="site-navigation" aria-label="Primary navigation">
+        <div class="container">
+            <ul class="nav-list">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section
+            id="cms-comparison"
+            class="section section-alt"
+            aria-labelledby="comparison-heading"
+        >
+            <div class="container">
+                <h2 id="comparison-heading">CMS Comparison Table</h2>
+
+                <p>
+                    This table compares five content management
+                    systems based on their support, technology,
+                    major capabilities, and major limitations.
+                    Each entry includes the CMS's official website
+                    and an example website that uses it. The
+                    comparison data is stored in an external JSON
+                    file and displayed in the table using JavaScript.
+                </p>
+
+                <p
+                    id="cms-status"
+                    class="error-message"
+                    role="alert"
+                    hidden
+                >
+                    The CMS comparison could not be loaded.
+                    Please refresh the page or try again later.
+                </p>
+
+                <noscript>
+                    <p class="error-message">
+                        JavaScript is disabled or unavailable.
+                        Enable JavaScript to display the CMS
+                        comparison table.
+                    </p>
+                </noscript>
+
+                <div
+                    class="cms-table-wrapper"
+                    role="region"
+                    aria-labelledby="comparison-heading"
+                    tabindex="0"
+                >
+                    <table class="cms-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Support</th>
+                                <th scope="col">Technology</th>
+                                <th scope="col">Capabilities</th>
+                                <th scope="col">Limitations</th>
+                                <th scope="col">Examples</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="cms-table-body">
+                            <!-- JavaScript generates the CMS rows here. -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section
+            id="research-sources"
+            class="section"
+            aria-labelledby="sources-heading"
+        >
+            <div class="container">
+                <h2 id="sources-heading">Research Sources</h2>
+
+                <p>
+                    These sources provide information about each
+                    CMS's support, technology, capabilities,
+                    limitations, and example websites.
+                </p>
+
+                <h3>WordPress</h3>
+
+                <ul class="resource-list">
+                    <li>
+                        <a href="https://wordpress.org/">
+                            WordPress Official Website
+                        </a>
+                        - Open source support, themes, block editing,
+                        and plugins.
+                    </li>
+                    <li>
+                        <a href="https://wordpress.org/about/requirements/">
+                            WordPress Requirements
+                        </a>
+                        - PHP and database requirements.
+                    </li>
+                    <li>
+                        <a href="https://developer.wordpress.org/advanced-administration/security/hardening/">
+                            Hardening WordPress
+                        </a>
+                        - Security risks, plugin maintenance,
+                        and updates.
+                    </li>
+                    <li>
+                        <a href="https://codex.wordpress.org/High_Traffic_Tips_For_WordPress">
+                            High Traffic Tips for WordPress
+                        </a>
+                        - Plugin and theme database usage,
+                        server load, and performance limitations.
+                    </li>
+                    <li>
+                        <a href="https://wordpress.org/showcase/nasa/">
+                            NASA WordPress Showcase
+                        </a>
+                        - Identifies NASA as a website that
+                        uses WordPress.
+                    </li>
+                </ul>
+
+                <h3>Drupal</h3>
+
+                <ul class="resource-list">
+                    <li>
+                        <a href="https://www.drupal.org/about">
+                            About Drupal
+                        </a>
+                        - Community support, content management,
+                        modules, and themes.
+                    </li>
+                    <li>
+                        <a href="https://www.drupal.org/docs/getting-started/system-requirements">
+                            Drupal System Requirements
+                        </a>
+                        - Server and database requirements.
+                    </li>
+                    <li>
+                        <a href="https://www.drupal.org/project/upgrade_status">
+                            Drupal Upgrade Status
+                        </a>
+                        - Deprecated code, extension compatibility,
+                        and major version upgrade requirements.
+                    </li>
+                    <li>
+                        <a href="https://new.drupal.org/node/2644270/case-studies">
+                            Mobomo Drupal Case Studies
+                        </a>
+                        - Includes the General Services
+                        Administration's USA.gov website.
+                    </li>
+                </ul>
+
+                <h3>Joomla</h3>
+
+                <ul class="resource-list">
+                    <li>
+                        <a href="https://www.joomla.org/">
+                            Joomla Official Website
+                        </a>
+                        - Open source project and support information.
+                    </li>
+                    <li>
+                        <a href="https://manual.joomla.org/docs/5.4/get-started/technical-requirements/">
+                            Joomla 5 Technical Requirements
+                        </a>
+                        - PHP and supported database requirements.
+                    </li>
+                    <li>
+                        <a href="https://www.joomla.org/core-features.html">
+                            Joomla Benefits and Core Features
+                        </a>
+                        - Multilingual content, access controls,
+                        templates, and extensions.
+                    </li>
+                    <li>
+                        <a href="https://guide.joomla.org/user-guide/migration/joomla-5-to-6-planning-and-upgrade-step-by-step">
+                            Joomla 5 to 6 Upgrade Guide
+                        </a>
+                        - Third party extension compatibility and
+                        backward compatibility restrictions.
+                    </li>
+                    <li>
+                        <a href="https://showcase.joomla.org/">
+                            Joomla Showcase Directory
+                        </a>
+                        - Example websites, including Vokoloko.cz.
+                    </li>
+                </ul>
+
+                <h3>Ghost</h3>
+
+                <ul class="resource-list">
+                    <li>
+                        <a href="https://ghost.org/">
+                            Ghost Official Website
+                        </a>
+                        - Open source publishing, managed hosting,
+                        newsletters, and memberships.
+                    </li>
+                    <li>
+                        <a href="https://docs.ghost.org/install/ubuntu/">
+                            Ghost Ubuntu Installation Guide
+                        </a>
+                        - Production requirements, including
+                        Node.js, MySQL, and NGINX.
+                    </li>
+                    <li>
+                        <a href="https://docs.ghost.org/">
+                            Ghost Developer Documentation
+                        </a>
+                        - APIs, integrations, and custom front ends.
+                    </li>
+                    <li>
+                        <a href="https://ghost.org/help/alternative-payment-gateways.md">
+                            Ghost Alternative Payment Gateways
+                        </a>
+                        - Native Stripe support and requirements
+                        for using other payment providers.
+                    </li>
+                    <li>
+                        <a href="https://ghost.org/publishers/?lang=en">
+                            Ghost for Publishers
+                        </a>
+                        - Publisher examples, including 404 Media.
+                    </li>
+                </ul>
+
+                <h3>Grav</h3>
+
+                <ul class="resource-list">
+                    <li>
+                        <a href="https://getgrav.org/">
+                            Grav Official Website
+                        </a>
+                        - Support, flat file content storage,
+                        templates, plugins, and features.
+                        The website also identifies itself as
+                        built with Grav.
+                    </li>
+                    <li>
+                        <a href="https://learn.getgrav.org/2/advanced/performance-and-caching">
+                            Grav Performance and Caching
+                        </a>
+                        - Page change detection, PHP caching,
+                        and filesystem performance limitations.
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                &copy; 2026 Elliott Page.
+                COP4813 Web Programming Portfolio.
+            </p>
+        </div>
+    </footer>
+
+    <script
+        src="script.js"
+        defer
+        onerror="document.getElementById('cms-status').hidden = false;"
+    ></script>
+</body>
+</html>

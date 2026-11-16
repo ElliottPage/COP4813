@@ -443,6 +443,7 @@ a:focus {
 }
 
 /* Remove the gap above the Home navigation bar. */
+
 .battery-page nav {
     margin-top: 0;
 }
@@ -627,6 +628,7 @@ a:focus {
     font-weight: bold;
     color: #176b3a;
 }
+
 /* Mobile homepage refinements */
 
 .hero-layout > *,
@@ -645,12 +647,14 @@ a:focus {
 }
 
 /* Keep navigation text white when hovered or focused. */
+
 .nav-list a:hover,
 .nav-list a:focus {
     color: var(--white);
 }
 
 /* Give assignment links a larger clickable area. */
+
 .card > a {
     display: inline-flex;
     align-items: center;
@@ -659,6 +663,7 @@ a:focus {
 }
 
 /* Two assignment columns on medium sized screens. */
+
 @media (min-width: 701px) and (max-width: 1000px) {
     .card-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -666,6 +671,7 @@ a:focus {
 }
 
 /* Smaller spacing on phones. */
+
 @media (max-width: 700px) {
     .site-header {
         padding: 1.75rem 0;
@@ -697,5 +703,180 @@ a:focus {
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
+    }
+}
+
+/* Assignment 12: CMS Comparison */
+
+.cms-page .cms-table-wrapper {
+    width: 100%;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.cms-page .cms-table-wrapper:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 4px;
+}
+
+.cms-page .cms-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.cms-page .cms-table caption {
+    padding: 1rem;
+    color: var(--navy);
+    font-weight: bold;
+    text-align: left;
+    background-color: var(--light-blue);
+}
+
+.cms-page .cms-table th,
+.cms-page .cms-table td {
+    padding: 0.85rem 0.65rem;
+    border: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+}
+
+.cms-page .cms-table thead th {
+    color: var(--white);
+    background-color: var(--navy);
+}
+
+/* Narrow outer columns; the four middle columns share the rest. */
+
+.cms-page .cms-table thead th:first-child {
+    width: 7.5rem;
+}
+
+.cms-page .cms-table thead th:last-child {
+    width: 7.5rem;
+}
+
+/* Preserve whole words in the Name and Examples columns. */
+
+.cms-page .cms-table tbody th,
+.cms-page .cms-table td:last-child {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.cms-page .cms-table tbody th {
+    color: var(--navy);
+}
+
+/* Technology descriptions: preserve JSON line breaks. */
+
+.cms-page .cms-table td:nth-child(3) li {
+    white-space: pre-line;
+}
+
+/* Table rows and descriptions */
+
+.cms-page .cms-table tbody tr:nth-child(even) {
+    background-color: #f4f7fa;
+}
+
+.cms-page .cms-table tbody tr:hover {
+    background-color: var(--light-blue);
+}
+
+.cms-page .cms-table ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cms-page .cms-table li + li {
+    margin-top: 0.65rem;
+}
+
+/* Official website links beneath CMS names */
+
+.cms-page .cms-source {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+}
+
+/* Hidden unless the table cannot be loaded. */
+
+.cms-page #cms-status {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Stack each CMS entry on small screens instead of scrolling. */
+
+@media (max-width: 700px) {
+    .cms-page .cms-table,
+    .cms-page .cms-table tbody,
+    .cms-page .cms-table tbody tr {
+        display: block;
+        width: 100%;
+    }
+
+    .cms-page .cms-table caption {
+        display: block;
+    }
+
+    .cms-page .cms-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+
+    .cms-page .cms-table tbody tr + tr {
+        border-top: 3px solid var(--navy);
+    }
+
+    .cms-page .cms-table tbody th,
+    .cms-page .cms-table tbody td {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+        border: 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .cms-page .cms-table tbody th {
+        background-color: var(--light-blue);
+    }
+
+    .cms-page .cms-table tbody td::before {
+        display: block;
+        margin-bottom: 0.35rem;
+        color: var(--navy);
+        font-weight: bold;
+    }
+
+    .cms-page .cms-table tbody td:nth-child(2)::before {
+        content: "Support";
+    }
+
+    .cms-page .cms-table tbody td:nth-child(3)::before {
+        content: "Technology";
+    }
+
+    .cms-page .cms-table tbody td:nth-child(4)::before {
+        content: "Capabilities";
+    }
+
+    .cms-page .cms-table tbody td:nth-child(5)::before {
+        content: "Limitations";
+    }
+
+    .cms-page .cms-table tbody td:nth-child(6)::before {
+        content: "Examples";
     }
 }
