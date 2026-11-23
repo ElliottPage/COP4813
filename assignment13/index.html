@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lionfish Reef Rescue | Elliott Page</title>
+
+    <meta
+        name="description"
+        content="Learn about invasive lionfish and play a reef rescue game."
+    >
+    <meta name="author" content="Elliott Page">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="game.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body class="reef-page">
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <header class="site-header">
+        <div class="container">
+            <p class="site-label">COP4813 | Assignment 13</p>
+
+            <h1>Reef Protector</h1>
+
+            <p class="tagline">
+                Remove invasive lionfish and protect native marine life.
+            </p>
+        </div>
+    </header>
+
+    <nav class="site-navigation" aria-label="Primary navigation">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section
+            class="section"
+            aria-labelledby="lionfish-heading"
+        >
+            <div class="container">
+                <div class="lionfish-intro">
+                    <div class="intro-copy">
+                        <h2 id="lionfish-heading">
+                            An Invader of Florida's Reefs
+                        </h2>
+
+                        <p>
+                            Lionfish are native to the Indo-Pacific,
+                            but they have become invasive in the
+                            Atlantic, including waters around Florida.
+                            Their striking stripes and flowing fins
+                            hide a serious problem for native marine life.
+                        </p>
+
+                        <p>
+                            Lionfish eat small native fish and
+                            crustaceans, including young fish that
+                            help support reef communities. They also
+                            compete with native predators, such as
+                            snapper and grouper for food.
+                        </p>
+
+                        <p>
+                            With few natural predators in their
+                            invaded range, lionfish can disrupt the
+                            balance of reef ecosystems and reduce
+                            the variety of native marine life.
+                        </p>
+
+                        <p class="safety-note">
+                            Real lionfish have venomous spines.
+                            Never touch or attempt to handle one.
+                        </p>
+
+                        <p class="information-source">
+                            Information:
+                            <a
+                                href="https://oceanservice.noaa.gov/facts/lionfish.html"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                NOAA National Ocean Service
+                            </a>
+                        </p>
+                    </div>
+
+                    <figure class="intro-photo">
+                        <img
+                            src="images/lionfish-photo.jpg"
+                            alt="Lionfish with striped markings and long, spreading fins"
+                        >
+
+                        <figcaption>
+                            Lionfish can be recognized by their striped body, sharp spines,
+                            and long spreading fins.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="section section-alt"
+            aria-labelledby="game-heading"
+        >
+            <div class="container">
+                <div class="game-heading-row">
+                    <div>
+                        <h1 id="game-heading">Click Lionfish while avoiding native species.</h1>
+                    </div>
+
+                    <button
+                        id="start-button"
+                        class="primary-button"
+                        type="button"
+                        disabled
+                    >
+                        Start Game
+                    </button>
+                </div>
+
+                <p
+                    id="game-message"
+                    class="game-message"
+                    role="status"
+                    aria-live="polite"
+                >
+                    Loading fish images...
+                </p>
+
+                <noscript>
+                    <p>
+                        Enable JavaScript to play Lionfish Reef Rescue.
+                    </p>
+                </noscript>
+
+                <div
+                    id="ocean"
+                    class="ocean"
+                    role="group"
+                    aria-label="Reef rescue game area"
+                >
+                    <div id="fish-grid" class="fish-grid"></div>
+                </div>
+
+                <section
+                    id="results"
+                    class="results-panel"
+                    aria-labelledby="results-heading"
+                    tabindex="-1"
+                    hidden
+                >
+                    <h3 id="results-heading">Your Results</h3>
+
+                    <p id="final-score" class="final-score"></p>
+                    <p id="result-summary"></p>
+                </section>
+            </div>
+        </section>
+
+        <section
+            class="section"
+            aria-labelledby="credits-heading"
+        >
+            <div class="container">
+                <h2 id="credits-heading">
+                    Sources and Image Credits
+                </h2>
+
+                <p>
+                    Educational information:
+                    <a
+                        href="https://oceanservice.noaa.gov/facts/lionfish.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        NOAA National Ocean Service
+                    </a>
+                </p>
+
+                <ul class="credits-list">
+                    <li>
+                        Lionfish1:
+                        <a
+                            href="https://www.pinterest.com/pin/422071796343612051/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Source pin on Pinterest
+                        </a>
+                    </li>
+
+                    <li>
+                        Lionfish2:
+                        <a
+                            href="https://www.rawpixel.com/image/10173923/png-ocean-animals"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            rawpixel
+                        </a>
+                    </li>
+
+                    <li>
+                        Lionfish3:
+                        <a
+                            href="https://stock.adobe.com/search?k=lionfish&amp;asset_id=611252212"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Adobe Stock, asset 611252212
+                        </a>
+                    </li>
+
+                    <li>
+                        Atlantic blue tang:
+                        <a
+                            href="https://cdn.saltwaterfish.com/swf_product_images/saltwater/acanthurus-coeruleus-719.avif"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Image hosted by Saltwaterfish.com
+                        </a>
+                    </li>
+
+                    <li>
+                        Queen angelfish:
+                        <a
+                            href="https://en.wikipedia.org/wiki/Queen_angelfish#/media/File:Queen_Angelfish.jpg"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Queen Angelfish image on Wikipedia
+                        </a>
+                    </li>
+
+                    <li>
+                        Yellowtail snapper:
+                        <a
+                            href="https://a-z-animals.com/media/2023/01/iStock-1404933563-1024x683.jpg"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Image hosted by A–Z Animals
+                        </a>
+                    </li>
+
+                    <li>
+                        Ocean background:
+                        <a
+                            href="https://www.independent.com/wp-content/uploads/2024/01/AdobeStock_444355340.jpeg?w=4148"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Image hosted by the Santa Barbara Independent
+                        </a>
+                    </li>
+
+                    <li>
+                        Introductory lionfish photograph:
+                        <a
+                            href="https://marinesanctuary.org/wp-content/uploads/2018/10/the-exotic-lionfish.jpg"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Image hosted at MarineSanctuary.org
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="credits-note">
+                    Game images were edited to remove backgrounds.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                &copy; 2026 Elliott Page.
+                COP4813 Web Programming Portfolio.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
